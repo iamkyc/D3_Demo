@@ -9,25 +9,20 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
-import BarChart from "./BarChart";
+import PieChart from "./PieChart";
 import "../../App.css"
 
 const INIT_DATA = [
-  { category: "一月", value: 35 },
-  { category: "二月", value: 40 },
-  { category: "三月", value: 42 },
-  { category: "四月", value: 39 },
-  { category: "五月", value: 49 },
-  { category: "六月", value: 56 },
-  { category: "七月", value: 54 },
-  { category: "八月", value: 68 },
-  { category: "九月", value: 69 },
+  { category: "電源供應器", value: 47 },
+  { category: "感測器", value: 32 },
+  { category: "馬達", value: 11 },
+  { category: "其他", value: 10 },
 ];
 
 const INIT_FORMAT = { category: '', value: '' };
 const WIDTH = 600;
 
-const BarChartContainer = () => {
+const PieChartContainer = () => {
   const [data, setData] = useState(INIT_DATA);
 
   const deepCopy = (arr) => JSON.parse(JSON.stringify(arr));
@@ -53,9 +48,9 @@ const BarChartContainer = () => {
 
   return (
     <div className="sub-container">
-      <h3>每月銷量統計分析表</h3>
+      <h3>產品銷售類別分析表</h3>
       <div className="chart-area">
-        <BarChart data={data} width={WIDTH} height={320} />
+        <PieChart data={data} width={WIDTH} height={320} />
       </div>
       <TableContainer component={Paper} sx={{ maxWidth: WIDTH }}>
         <Table aria-label="simple table">
@@ -111,4 +106,4 @@ const BarChartContainer = () => {
   );
 };
 
-export default BarChartContainer;
+export default PieChartContainer;

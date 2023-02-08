@@ -1,9 +1,11 @@
 .container {
-  padding-top: 24px;
+  margin: 0 auto;
+  max-width: 1480px;
+  display: flex;
 }
 
 .sub-container {
-  margin: 30px 60px;
+  margin: 30px 30px;
 }
 
 .delete-btn {

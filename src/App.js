@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveAppBar, BarChartContainer } from "./components";
+import { ResponsiveAppBar, BarChartContainer, PieChartContainer } from "./components";
 import "./App.css";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <ResponsiveAppBar />
       <div className="container">
         <BarChartContainer />
+        <PieChartContainer />
       </div>
     </div>
   );

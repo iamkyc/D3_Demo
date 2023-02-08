@@ -46,9 +46,12 @@ const PieChart = ({ data, width, height }) => {
       .style("fill", (d, i) => color(i));
 
     g.append("text")
-      .attr("transform", d => `translate(${arc.centroid(d.value)})`)
-      .attr("dy", ".7em")
-      .text(d => d.value);
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 14)
+      .attr("text-anchor", "middle")
+      .attr("transform", (d) => `translate(${arc.centroid(d)})`)
+      .attr("dy", "0em")
+      .text((d) => d.data.category);
   };
 
   return (
